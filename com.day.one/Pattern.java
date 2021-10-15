@@ -1,4 +1,4 @@
-package com.day.one;
+
 
 import java.util.Scanner;
 
@@ -6,10 +6,15 @@ public class Pattern {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Number of rows");
-		int num = sc.nextInt();
+        System.out.println("Enter your input");
+        int numOfRows = sc.nextInt();
+		numberPyramid(numOfRows);
+        sc.close();
+	}
+
+    public static void numberPyramid(int numOfRows){
 		int rowsCount = 1;
-		for(int i=num;i>0;i--) {
+		for(int i=numOfRows;i>0;i--) {
 			for(int j=1;j<i;j++) {
 				System.out.print(" ");
 			}
@@ -19,7 +24,6 @@ public class Pattern {
 			System.out.println();
 			rowsCount++;
 		}
-		sc.close();
-	}
+    }
 
 }
