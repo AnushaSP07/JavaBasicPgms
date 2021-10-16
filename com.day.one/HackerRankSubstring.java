@@ -8,6 +8,7 @@ public class HackerRankSubstring{
         int end = in.nextInt();
        // String subDa = S.subString(start,end);
         System.out.println(S.substring(start,end));
+        in.close();
         
     }
     

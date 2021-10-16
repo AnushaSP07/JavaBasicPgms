@@ -5,7 +5,8 @@ public class Pattern {
 		Scanner sc = new Scanner(System.in);
         System.out.println("Enter your input");
         int numOfRows = sc.nextInt();
-		numberPyramid(numOfRows);
+	//	numberPyramid(numOfRows);
+		pattern2(numOfRows);
         sc.close();
 	}
 
@@ -22,5 +23,19 @@ public class Pattern {
 			rowsCount++;
 		}
     }
+
+	public static void pattern2(int num){
+		int count =1;
+		for(int i=num;i>0;i--){
+			for(int j=i;j<=i;j++){
+				System.out.print(" ");
+			}
+			for(int j=1;j<=count;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+			count++;
+		}
+	}
 
 }
