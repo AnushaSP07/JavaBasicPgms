@@ -11,21 +11,23 @@ public class FindDuplicateChar {
 
     public static void duplicateChars(String inputString){
         HashMap<Character,Integer> charCountMap = new HashMap<>();
-        char[] charArray = inputString.toCharArray();
-            for(char ch : charArray){
-                if(charCountMap.containsKey(ch)){
-                    charCountMap.put(ch, charCountMap.get(ch)+1);
-                }else{
-                    charCountMap.put(ch, 1);
-                }
+        char[] strArray = inputString.toCharArray();
+
+        for(char c: strArray){
+            if(charCountMap.containsKey(c)){
+                charCountMap.put(c, charCountMap.get(c)+1);
+            }else{
+                charCountMap.put(c, 1);
             }
-            Set<Character> set = charCountMap.keySet();
-            System.out.println("Duplicate chars in "+inputString);
-            for(Character c : set){
-                if(charCountMap.get(c)>1){
-                    System.out.println(c+" "+charCountMap.get(c));
-                }
+        }
+        Set<Character> charsInString = charCountMap.keySet();
+        System.out.println("Duplicate Chars in InputString "+charsInString);
+
+        for(char ch : charsInString){
+            if(charCountMap.get(ch)>1){
+                System.out.println(ch+" : "+charCountMap.get(ch));
             }
+        }
     }
     
 }
